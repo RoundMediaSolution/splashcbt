@@ -189,14 +189,17 @@
                         <BUTTON>VALIDASI</BUTTON>
                     </a>
                     <script>
-function validatePass(){
-    if(document.getElementById('ipn').value == 'NYEMWOW','AYMGPR','ENKLPR','CHWNKS'){
-        return true;
-    }else{
-        alert('TOKEN UJIAN ANDA SALAH, PASTIKAN TOKEN YANG ANDA MASUKKAN SESUAI!');
-        return false;
-    }
+function validatePass() {
+  var validPasswords = ['NYEMWOW', 'AYMGPR', 'ENKLPR', 'CHWNKS'];
+  var userInput = document.getElementById('ipn').value;
+  if (validPasswords.includes(userInput)) {
+    return true;
+  } else {
+    alert('TOKEN UJIAN ANDA SALAH, PASTIKAN TOKEN YANG ANDA MASUKKAN SESUAI!');
+    return false;
+  }
 }
+
     </script>
                 </c>
                 <p></p>
